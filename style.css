@@ -1,0 +1,25 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden; /* 禁止滾動，畫布固定不會跟著頁面滾動 */
+  touch-action: none; /* 防止手機觸控拖曳導致頁面滾動 */
+  overscroll-behavior: none; /* 防止瀏覽器的彈性滾動或滾動傳遞 */
+}
+
+body {
+    background: url('背景/1234.jpg') no-repeat center center fixed;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    /* 若希望 canvas 透明以顯示此 CSS 背景，請在 sketch.js 中移除 background(...) 或讓 canvas 透明 */
+}
+
+canvas {
+  display: block;
+  position: fixed; /* 把 canvas 固定在視窗，不會跟著頁面滾動 */
+  left: 0;
+  top: 0;
+  background: transparent; /* 讓 canvas 背景透明以顯示 CSS 背景 */
+}
